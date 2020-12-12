@@ -2,7 +2,16 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-
+const reviewSchema = new Schema({
+    reviewer: String,
+    avatar: String,
+    rating: {type: Number,
+             min: 0,
+             max: 5},
+    content: String
+}, {
+    timestamps: true
+})
 
 
 const bookSchema = new Schema({
@@ -18,5 +27,3 @@ const bookSchema = new Schema({
 }, {
     timestamps: true
 })
-
-
