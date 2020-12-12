@@ -11,7 +11,7 @@ const reviewSchema = new Schema({
     content: String
 }, {
     timestamps: true
-})
+});
 
 
 const bookSchema = new Schema({
@@ -26,4 +26,7 @@ const bookSchema = new Schema({
     reviews: [reviewSchema]
 }, {
     timestamps: true
-})
+});
+
+
+module.exports = mongoose.model("Book", bookSchema);
