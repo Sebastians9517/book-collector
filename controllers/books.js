@@ -18,6 +18,9 @@ function newBook(req, res) {
 function index(req, res) {
     Book.find({})
     .then((err, books) => {
-        res.render("books/index", {title: "All the books that have been added are here.", books})
+        res.render("books/index", {
+            title: "All the books that have been added are here.",
+            books: books,
+            user: req.user})
     })
 }
