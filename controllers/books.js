@@ -3,7 +3,7 @@ const axios = require("axios");
 
 module.exports = {
     new: newBook,
-    // index,
+    index,
 
 }
 
@@ -15,7 +15,9 @@ function newBook(req, res) {
             });
 }
 
-// function index(req, res) {
-//     Book.find({})
-//     .then(())
-// }
+function index(req, res) {
+    Book.find({})
+    .then((err, books) => {
+        res.render("books/index", {title: "All the books that have been added are here.", books})
+    })
+}
