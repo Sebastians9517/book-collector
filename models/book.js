@@ -23,7 +23,7 @@ const bookSchema = new Schema({
     publicationDate : {type: String,
                        default: "Unknown"},
     read: {type: Boolean,
-    },
+           default: false},
     description: String,
     reviews: [reviewSchema]
 }, {

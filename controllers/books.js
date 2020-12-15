@@ -17,15 +17,21 @@ function newBook(req, res) {
 }
 
 function index(req, res) {
-    Book.find({})
-    .then((err, books) => {
-        console.log(books, "books")
-        res.render("books/index", {
-            title: "All the books that have been added are here.",
-            books: books,
-            user: req.user})
+    Book.find({}, function(err, books) {
+      res.render('books/index', {title: "All books", books: books, user: req.user})
     })
-}
+  }
+
+// function index(req, res) {
+//     Book.find({})
+//     .then((err, books) => {
+//         console.log(books, "books")
+//         res.render("books/index", {
+//             title: "All the books that have been added are here.",
+//             books: books,
+//             user: req.user})
+//     })
+// }
 
 function details(req, res) {
     Book.findById(req.params.id)
