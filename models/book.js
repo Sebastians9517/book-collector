@@ -22,6 +22,8 @@ const bookSchema = new Schema({
             default: "Anonymous"},
     publicationDate : {type: String,
                        default: "Unknown"},
+    read: {type: Boolean,
+    },
     description: String,
     reviews: [reviewSchema]
 }, {
