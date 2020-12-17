@@ -2,5 +2,59 @@
 
 <h1>This is the details page</h1>
 <h1><% title %> </h1>
+    <h4 class="card-title"><%= book.title %> </h4>
+    <img src="#" alt="#">
+    <p class="card-text">Publication date: <%= book.publicationDate %> </p>
+    <p class="card-description">Synopsis: <%= book.description %> </p>
+    <form action="/books/<%= book._id %>/edit" method="GET">
+        <button type="submit">Update book</button>
+    </form>
 
+    <form action="/books/<%= book._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete book</button>
+    </form>
+
+    <h2>Reviews</h2>
+<form id="add-review-form" method="POST" action="/books/<%= book._id %>/reviews">
+  <label>Review:</label>
+  <textarea name="content"></textarea>
+  <label>Rating:</label>
+  <select name="rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <input type="submit" value="Add Review">
+</form>
+
+<% if (book.reviews.length) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Review</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% let total = 0 %>
+      <% book.reviews.forEach(function(r) { %>
+        <% total += r.rating %>
+        <tr>
+          <td><%= r.createdAt.toLocaleDateString() %></td>
+          <td><%= r.content %></td>
+          <td><%= r.rating %></td>
+        </tr>
+      <% }); %>
+      <tr>
+        <td colspan="2"></td>
+        <td><strong><%= (total / book.reviews.length).toFixed(1) %></strong></td>
+      </tr>
+    </tbody>
+  </table>
+<% } else { %>
+  <h5>No Reviews Yet</h5>
+<% } %>
 <%- include('../partials/footer') %>

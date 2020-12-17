@@ -2,12 +2,12 @@
 
 <h1><%= title %> </h1>
 <form action="/books" id="new-form" method="POST">
-    <label>Title:</label>
-    <input type="text" name="title" placeholder="Please write the title for your book"> <br>
+    <!-- <label>Title:</label> -->
+    <input type="text" name="title" placeholder="Book title" required> <br>
     <input type="text" name="author" placeholder="Author's name"> <br>
     <input type="text" name="publicationDate" placeholder="Release year (YYYY)"> <br>
     <input type="text" name="description" placeholder="Synopsis"> <br>
-    <label>Read already?</label>
+    <label>Already read?</label>
     <input type="checkbox" name="read">
     <button type="submit" value="New Book">Add new book</button>
 </form>

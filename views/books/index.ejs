@@ -1,15 +1,18 @@
 <%- include('../partials/header') %>
 
-<h1>This is the index page</h1>
 <h1><%= title %> </h1>
-<% books.forEach((b) => { %>
-    <div class="card">
-        <h4 class="card-title"><%= b.title %> </h4>
-        <img src="#" alt="#">
-        <p class="card-text">Publication date: <%= b.publicationDate %> </p>
-        <p class="card-description">Synopsis: <%= b.description %> </p>
-        <a href="/books/<%= b._id %> ">Book details</a>
-    </div>
+<% if (books.length !== 0) { %>
+    <% books.forEach((b) => { %>
+        <div class="card">
+            <h4 class="card-title"><%= b.title %> </h4>
+            <img src="#" alt="#">
+            <p class="card-text">Publication date: <%= b.publicationDate %> </p>
+            <!-- <p class="card-description">Synopsis: <%= // b.description %> </p> -->
+            <a href="/books/<%= b._id %> ">Book details</a>
+        </div>
 <% }); %>
+<% } else { %>
+        <h3>There are no books</h3>
+    <% }; %>
 
 <%- include('../partials/footer') %>

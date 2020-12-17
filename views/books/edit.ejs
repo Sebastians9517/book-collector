@@ -1,0 +1,16 @@
+<%- include("../partials/header") %>
+
+<h1>This is the edit page</h1>
+<h3>Please make the desired changes to you book using the form below</h3>
+<form action="/books/<%= book._id %>?_method=PUT " id="new-form" method="POST">
+    <label>Title:</label>
+    <input type="text" name="title" placeholder="Please write the title for your book"> <br>
+    <input type="text" name="author" placeholder="Author's name"> <br>
+    <input type="text" name="publicationDate" placeholder="Release year (YYYY)"> <br>
+    <input type="text" name="description" placeholder="Synopsis"> <br>
+    <label>Read already?</label>
+    <input type="checkbox" name="read">
+    <button type="submit">Update book</button>
+</form>
+
+<%- include("../partials/footer") %>
