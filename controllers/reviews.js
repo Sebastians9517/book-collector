@@ -5,10 +5,9 @@ module.exports = {
 }
 
 function create(req, res) {
-    console.log(reviews)
-  Book.findById(req.params.id, function(err, book) {
+  Book.findById(req.params.id, (err, book) => {
     book.reviews.push(req.body)
-    book.save(function(err, book) {
+    book.save((err, book) => {
       res.redirect(`/books/${book._id}`)
     })
   })

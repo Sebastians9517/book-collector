@@ -3,7 +3,8 @@
 <h1>This is the details page</h1>
 <h1><% title %> </h1>
     <h4 class="card-title"><%= book.title %> </h4>
-    <img src="#" alt="#">
+    <% let randomCover = Math.floor(Math.random() * 74) + 1 %>
+    <img id="cover-detail" src="/cover-generator/covers/img<%= randomCover %>.png" alt="#">
     <p class="card-text">Publication date: <%= book.publicationDate %> </p>
     <p class="card-description">Synopsis: <%= book.description %> </p>
     <form action="/books/<%= book._id %>/edit" method="GET">

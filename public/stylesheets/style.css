@@ -6,4 +6,15 @@ body {
 
 nav {
   background-color: white;
+  display: inline;
+}
+
+#cover-index {
+  height: 400px;
+  width: 260px;
+}
+
+#cover-detail {
+  height: 800px;
+  width: 520px;
 }

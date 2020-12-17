@@ -5,7 +5,8 @@
     <% books.forEach((b) => { %>
         <div class="card">
             <h4 class="card-title"><%= b.title %> </h4>
-            <img src="#" alt="#">
+            <% let randomCover = Math.floor(Math.random() * 74) + 1 %>
+            <img id="cover-index" src="/cover-generator/covers/img<%= randomCover %>.png" alt="#">
             <p class="card-text">Publication date: <%= b.publicationDate %> </p>
             <!-- <p class="card-description">Synopsis: <%= // b.description %> </p> -->
             <a href="/books/<%= b._id %> ">Book details</a>
