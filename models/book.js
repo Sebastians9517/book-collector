@@ -3,12 +3,12 @@ const Schema = mongoose.Schema;
 
 
 const reviewSchema = new Schema({
+    content: String,
     reviewer: String,
     avatar: String,
     rating: {type: Number,
              min: 0,
              max: 5},
-    content: String
 }, {
     timestamps: true
 });
