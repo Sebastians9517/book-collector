@@ -1,12 +1,37 @@
 body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: gray;
+  background-color: rgb(206, 12, 12);
   margin: 0;
 }
 
-nav {
-  background-color: white;
-  display: inline;
+.navbar navbar-inverse {
+  background-color: rgb(240, 229, 229);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.navbar > li:last-of-type {
+  display: flex;
+  height: 60px;
+  background-color: #1b82db;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: white solid 2px;
+  grid-area: nav;
+}
+
+#navbar li {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 20px;
+}
+
+#avatarPhoto {
+  height: 50px;
+  border-radius: 50%;
 }
 
 #cover-index {

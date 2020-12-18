@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<h3>Welcome to the bibliophile corner</h3>
+<form action="/forums" method="POST">
+  <div class="form-group">
+    <input type="text" class="form-control" aria-describedby="forum" name="title" placeholder="Enter message..." required>
+  </div>
+  <button type="submit" class="btn btn-success">Create Post</button>
+</form>
+
+<% forums.forEach(forum => { %>
+  <div class="card">
+    <div class="card-header">
+      <%= forum.postedBy %> <img id="avatarPhoto" width="30" src="<%= forum.avatar %>" alt="">
+    </div>
+    <div class="card-body">
+      <h4 class="card-title"><%= forum.title %></h4>
+      <h5><%= forum.createdAt.toLocaleString()%></h5>
+    </div>
+  </div>
+<% }) %>
+
+<%- include('../partials/footer') %>
