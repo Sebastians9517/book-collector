@@ -1,5 +1,16 @@
 <%- include('partials/header') %>
 
-<h1>hello, <%= user ? user.name : "friend" %></h1>
+<div class="book">
+    <p id="welcome" class="ele"><a href="/auth/google"><%= user ? `Welcome, ${user.name}` : "Please login to start" %></a></p>
+    <span class="page turn"></span>
+    <span class="page turn"></span>
+    <span class="page turn"></span>
+    <span class="page turn"></span>
+    <span class="page turn"></span>
+    <span class="page turn"></span>
+    <span class="cover"></span>
+    <span class="page"></span>
+    <span class="cover turn"></span>
+  </div>
 
 <%- include('partials/footer') %>
