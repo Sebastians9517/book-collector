@@ -7,8 +7,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    
+    <link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/public/stylesheets/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/public/stylesheets/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="/public/stylesheets/css/book.css" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
+		<script defer src="js/modernizr.custom.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
@@ -22,6 +26,7 @@
         <ul class="nav navbar-nav">
           <% if (user) { %>
           <li class="active"><a href="/">Home</a></li>
+          <!-- <li><div data-video="BFSWlDpA6C4" data-autoplay="1" data-loop="1" id="youtube-audio"></div></li> -->
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Actions<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li class="nav-item"><a href="/books/index" class="nav-link">All books</a></li>
