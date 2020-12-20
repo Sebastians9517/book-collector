@@ -27,6 +27,13 @@ nav li {
     list-style-type: none;
     padding: 20px;
 }
+#youtube-icon {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  z-index: 9999999999999;
+
+}
 
 #last-nav-item {
   margin-left: 0%;
@@ -37,10 +44,10 @@ nav li {
   border-radius: 50%;
 }
 
-#cover-index {
+/* #cover-index {
   height: 400px;
   width: 260px;
-}
+} */
 
 #cover-detail {
   height: 800px;
@@ -942,6 +949,9 @@ figcaption p {
 	}
 }
 
+#book-title {
+  z-index: 99999999999999999999999;
+}
 
 .problem {
   text-align:center
