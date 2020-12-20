@@ -213,3 +213,20 @@ nav li {
     opacity: 1;
   }
 }
+
+#containerDiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#containerDiv > div {
+  width: 250px;
+  margin: 20px 10px 0 10px;
+}
+
+.card {
+  color: var(--card-text-color);
+  text-align: center;
+  font-family: cursive;
+}
