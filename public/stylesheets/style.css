@@ -47,12 +47,9 @@ nav li {
   width: 520px;
 }
 
-
 #copyright {
   font-size: 1rem;
 }
-
-
 
 .book1 {
   position: absolute;
@@ -165,7 +162,7 @@ nav li {
   /* margin-right: auto;
   margin-left: auto; */
   /* display: flex; */
-  margin-top: 10%;
+  margin-top: 15%;
   margin-left: 53%;
   text-align: center;
   /* justify-content: center; */
