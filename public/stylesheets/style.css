@@ -21,6 +21,12 @@ nav {
   /* grid-area: nav; */
 }
 
+audio {
+    filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+    width: 200px;
+    height: 25px;
+}
+
 nav li {
     display: flex;
     flex-direction: row;
@@ -228,7 +234,7 @@ nav li {
 	background-color: wheat;
 }
 
-.card-title {
+/* .card-title {
 	font-size: 2.5rem;
 	font-weight: bold;
 }
@@ -238,8 +244,8 @@ nav li {
 }
 
 .card-description {
-	
-}
+
+} */
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 

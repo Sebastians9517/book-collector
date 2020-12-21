@@ -15,13 +15,13 @@ module.exports = {
 function newBook(req, res) {
     res.render("books/new", {
                 title: "Add a new book to your collection",
-                user: req.user
+                user: req.user._id
             });
   };
 
 function index(req, res) {
     Book.find({}, function(err, books) {
-      res.render('books/index', {title: "All books", books: books, user: req.user});
+      res.render('books/index', {title: "All books", books: books, user: req.user._id});
     });
   };
 
@@ -30,7 +30,7 @@ function details(req, res) {
         res.render("books/details", {
             title: "Book details",
             book,
-            user: req.user});
+            user: req.user._id});
     });
   };
 
@@ -69,6 +69,6 @@ function create(req, res) {
       res.render("books/edit", {
           title: "Book edit",
           book,
-          user: req.user});
+          user: req.user._id});
   });
   };
