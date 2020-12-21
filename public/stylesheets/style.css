@@ -43,8 +43,8 @@ nav li {
 } */
 
 #cover-detail {
-  height: 800px;
-  width: 520px;
+  height: 600px;
+  width: 420px;
 }
 
 #copyright {
@@ -222,9 +222,25 @@ nav li {
   font-family: cursive;
 }
 
-/*
-	A. Mini Reset
-*/
+#details-page {
+	align-content: center;
+	text-align: center;
+	background-color: wheat;
+}
+
+.card-title {
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+.card-text {
+	font-size: 1rem;
+}
+
+.card-description {
+	
+}
+
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 * {
