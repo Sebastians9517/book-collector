@@ -1,26 +1,26 @@
 <%- include("../partials/header") %>
 <div id="details-page">
 <h1><% title %> </h1>
-    <h4 class="card-title"><%= book.title %> </h4>
-    <% //let randomCover = Math.floor(Math.random() * 74) + 1 %>
-    <!-- <img id="cover-detail" src="/cover-generator/covers/img<%= //randomCover %>.png" alt="#"> -->
 
 
 
 
-    <div class="body0">
+<h1 class="card-title"><%= book.title %> </h1>
+<div class="body0">
       <div class="book0">
         <div class="back0"></div>
         <div class="page60">
           <form action="/books/<%= book._id %>/edit" method="GET">
             <button type="submit" class="btn0">Update book</button>
         </form>
+        <p class="card-description">Synopsis: <br> <%= book.description %> </p>
         </div>
         <div class="page50">
           <form action="/books/<%= book._id %>?_method=DELETE" method="POST">
             <!-- <button type="submit" class="delete-button">Delete book</button> -->
             <button style="transform: scale(-1, 1);" class="btn0">Delete book</button>
-        </form>
+          </form>
+          <p class="card-text" style="transform: scale(-1, 1);">Publication date: <br> <%= book.publicationDate %> </p>
         </div>
         <div class="page40"></div>
         <div class="page30"></div>
@@ -31,26 +31,12 @@
           <div class="coverDesign blue">
             <h4 class="card-title" id="book-title"><%= book.title %> </h4>
             <img id="cover-index" src="/cover-generator/covers/img<%= randomCover %>.png" alt="#" width="100%" height="100%">
+            <h3 class="cover-author"><%= book.author %></h3>
             <span class="ribbon">NEW</span>
           </div>
         </div>
       </div>
     </div>
-    <p class="card-text">Publication date: <%= book.publicationDate %> </p>
-    <p class="card-description">Synopsis: <%= book.description %> </p>
-
-
-    <!-- <form action="/books/<%= book._id %>/edit" method="GET">
-        <button type="submit">Update book</button>
-    </form> -->
-
-    <form action="/books/<%= book._id %>?_method=DELETE" method="POST">
-        <button type="submit">koob eteleD</button>
-    </form>
-
-
-
-
 
     <h2>Reviews</h2>
 <form id="add-review-form" method="POST" action="/books/<%= book._id %>/reviews">
