@@ -21,6 +21,9 @@ nav {
   /* grid-area: nav; */
 }
 
+#Yui {
+	border-radius: 10%;
+}
 audio {
     filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
     width: 200px;
@@ -234,10 +237,10 @@ nav li {
 	background-color: wheat;
 }
 
-/* .card-title {
-	font-size: 2.5rem;
-	font-weight: bold;
+.card-title {
+	text-transform: uppercase;
 }
+/*
 
 .card-text {
 	font-size: 1rem;
@@ -1088,22 +1091,11 @@ body {
 	  width: 45%;
   }
 
-  select {
-	background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
-	outline: none;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-  }
-
   select::-ms-expand {
 	display: none;
   }
 
   .subject {
-	width: 100%;
-  }
-
-  .telephone {
 	width: 100%;
   }
 

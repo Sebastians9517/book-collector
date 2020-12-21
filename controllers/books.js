@@ -1,5 +1,4 @@
 const Book = require("../models/book");
-const axios = require("axios");
 
 module.exports = {
     new: newBook,
@@ -15,13 +14,13 @@ module.exports = {
 function newBook(req, res) {
     res.render("books/new", {
                 title: "Add a new book to your collection",
-                user: req.user._id
+                user: req.user
             });
   };
 
 function index(req, res) {
     Book.find({}, function(err, books) {
-      res.render('books/index', {title: "All books", books: books, user: req.user._id});
+      res.render('books/index', {title: "All books", books: books, user: req.user});
     });
   };
 
@@ -30,7 +29,7 @@ function details(req, res) {
         res.render("books/details", {
             title: "Book details",
             book,
-            user: req.user._id});
+            user: req.user});
     });
   };
 
@@ -69,6 +68,6 @@ function create(req, res) {
       res.render("books/edit", {
           title: "Book edit",
           book,
-          user: req.user._id});
+          user: req.user});
   });
   };
