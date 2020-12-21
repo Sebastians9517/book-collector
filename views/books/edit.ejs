@@ -1,16 +1,40 @@
 <%- include("../partials/header") %>
 
-<h1>This is the edit page</h1>
-<h3>Please make the desired changes to you book using the form below</h3>
-<form action="/books/<%= book._id %>?_method=PUT " id="new-form" method="POST">
-    <label>Title:</label>
-    <input type="text" name="title" placeholder="Please write the title for your book" required> <br>
-    <input type="text" name="author" placeholder="Author's name"> <br>
-    <input type="text" name="publicationDate" placeholder="Release year (YYYY)"> <br>
-    <input type="text" name="description" placeholder="Synopsis"> <br>
-    <label>Read already?</label>
-    <input type="checkbox" name="read">
-    <button type="submit">Update book</button>
+<form action="/books/<%= book._id %>?_method=PUT" method="POST">
+    <div id="container">
+        <h1>&bull; Please make the desired changes to your book using the form below &bull;</h1>
+        <div class="underline">
+        </div>
+        <form action="/books" method="POST" id="contact_form">
+          <div class="name">
+            <label for="name"></label>
+            <input type="text" placeholder="Book title" name="title" id="name_input" required>
+          </div>
+          <div class="email">
+            <label for="email"></label>
+            <input type="text" placeholder="Author" name="author" id="email_input">
+          </div>
+          <div class="telephone">
+            <label for="name"></label>
+            <input type="text" placeholder="Release year (YYYY)" name="publicationDate" id="telephone_input">
+          </div>
+          <div class="subject">
+            <label for="subject"></label>
+            <select placeholder="Already read?" name="read" id="subject_input" required>
+              <option disabled hidden selected>Already read?</option>
+              <option>Yeah</option>
+              <option>Not yet, but looking forward to it</option>
+            </select>
+          </div>
+          <div class="message">
+            <label for="message"></label>
+            <textarea name="description" placeholder="Book synopsis (optional)" id="message_input" cols="30" rows="5"></textarea>
+          </div>
+          <div class="submit">
+            <button type="submit" id="form_button">Add new book</button>
+          </div>
+        </form>
+      </div>
 </form>
 
 <%- include("../partials/footer") %>

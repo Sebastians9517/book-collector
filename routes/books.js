@@ -8,6 +8,8 @@ router.get("/:id", isLoggedIn, booksCtrl.details);
 router.delete("/:id", isLoggedIn, booksCtrl.delete);
 router.get("/:id/edit", isLoggedIn, booksCtrl.edit);
 router.put("/:id", isLoggedIn, booksCtrl.update);
+// router.post('/:id/collection', isLoggedIn, booksCtrl.addToCollection)
+// router.delete('/:id/collection', isLoggedIn, booksCtrl.removeFromCollection)
 
 
 function isLoggedIn(req, res, next) {

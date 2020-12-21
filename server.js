@@ -47,6 +47,11 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+// Add this middleware BELOW passport middleware
+app.use(function (req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
 
 // router middleware
 app.use("/", indexRouter);
