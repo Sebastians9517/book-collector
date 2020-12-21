@@ -13,7 +13,7 @@ module.exports = {
 
 // function create(req, res) {
 //   const book = new Book(req.body);
-//   book.userRecommending = req.user._id;
+//   book.userAdding = req.user._id;
 //   book.save(function(err, book) {
 //     if (err) return res.render("views/error.ejs");
 //     res.redirect(`/books/${book._id}`);
@@ -21,14 +21,14 @@ module.exports = {
 // }
 
 // function deleteBook(req, res) {
-//   Book.findOneAndDelete({_id: req.params.id, userRecommending: req.user._id}, function(err) {
+//   Book.findOneAndDelete({_id: req.params.id, userAdding: req.user._id}, function(err) {
 //       res.redirect('/books');
 //     }
 //   );
 // }
 
 // function edit(req, res) {
-//   Book.findOne({_id: req.params.id, userRecommending: req.user._id}, function(err, book) {
+//   Book.findOne({_id: req.params.id, userAdding: req.user._id}, function(err, book) {
 //     if (err || !book) return res.redirect('/books');
 //     res.render('books/edit', {book});
 //   });
@@ -36,7 +36,7 @@ module.exports = {
 
 // function update(req, res) {
 //   Book.findOneAndUpdate(
-//     {_id: req.params.id, userRecommending: req.user._id},
+//     {_id: req.params.id, userAdding: req.user._id},
 //     req.body,
 //     {new: true},
 //     function(err, book) {
@@ -47,7 +47,7 @@ module.exports = {
 // }
 
 function index(req, res) {
-  Book.find({ userRecommending: req.user._id })
+  Book.find({ userAdding: req.user._id })
   .then((books) => {
     res.render('books/index', {
         title: "All books",
@@ -87,7 +87,7 @@ function create(req, res) {
     }
     const book = new Book(req.body);
 
-  book.userRecommending = req.user._id;
+  book.userAdding = req.user._id;
     book.save((err) => {
       if (err) {
         console.log(err)
