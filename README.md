@@ -12,4 +12,10 @@ GOOGLE_SECRET=XXXXXXXXXXXXXXXXXXXXXXXX
 GOOGLE_CALLBACK=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 SESSION_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ``` -->
-# book-collector
+# The Literature Club
+
+Have you ever struggled to remember which books you have already read? Or that book that your friend recommended you a few weeks ago? What about all the books that you bought and you wish to keep tabs on?
+
+Wouldn't it be awesome to be able to add them to a personal list on the cloud and don't forget about them ever again? Then fear not for I present you your very own book collector!
+
+
