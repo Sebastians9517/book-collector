@@ -25,6 +25,10 @@ Wouldn't it be awesome to be able to add them to a personal list on the cloud an
 ### Technologies used:
 * HTML
 * CSS
+  * [Book opening animation (pure CSS)](https://codepen.io/wwwebneko/pen/XjOZZK) by wwwebneko (home page).
+  * [Random image generator](https://codepen.io/yemsalat/pen/XJYpBJ/) by yemsalat (cover images).
+  * [Animated Books with CSS 3D Transforms](http://tympanus.net/codrops/2013/07/11/animated-books-with-css-3d-transforms/) by Marco Barria (index page).
+  * [CSS Only Flipping Book](https://codepen.io/dhanishgajjar/pen/bjaYYo) by dhanishgajjar (details page).
 * JavaScript
 * Node.js
 * Express.js
@@ -34,6 +38,12 @@ Wouldn't it be awesome to be able to add them to a personal list on the cloud an
 * Mongoose
 * MongoDB
 
+### Other resources:
+* Background music by [Dan Salvato](https://twitter.com/dansalvato) founder of [Team Salvato](https://twitter.com/TeamSalvato).
+  * Permission to use his work [here](https://twitter.com/dansalvato/status/939387069779947520?lang=en).
+  ![Dan Salvato permission](https://i.imgur.com/cp084tJ.png).
+* [JUKEHOST](https://jukehost.co.uk/login?r=/library) (audio hosting).
+* [Imgur](https://imgur.com/) (image hosting).
 
 #### Some screenshots:
 
