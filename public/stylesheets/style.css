@@ -1302,47 +1302,7 @@ body {
 
 }
 
-/* .stars {
-	margin-left: 43%;
-	margin-right: 43%;
-    padding: 0;
-}
 
-.rate {
-    float: left;
-    height: 46px;
-    padding: 0 10px;
-}
-.rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
-}
-.rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
-}
-.rate:not(:checked) > label:before {
-    content: '★ ';
-}
-.rate > input:checked ~ label {
-    color: #ffc700;
-}
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-    color: #deb217;
-}
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
-    color: #c59b08;
-} */
 
 #forums {
 	text-align: center;
@@ -1355,3 +1315,92 @@ body {
 .forum-title {
 	font-size: 3rem;
 }
+
+svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -250px;
+	margin-left: -400px;
+  }
+  .message-box {
+	height: 200px;
+	width: 380px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: 50px;
+	color: #FFF;
+	font-family: Roboto;
+	font-weight: 300;
+  }
+  .message-box h1 {
+	font-size: 60px;
+	line-height: 46px;
+	margin-bottom: 40px;
+  }
+  .buttons-con .action-link-wrap {
+	margin-top: 40px;
+  }
+  .buttons-con .action-link-wrap a {
+	background: #68c950;
+	padding: 8px 25px;
+	border-radius: 4px;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 14px;
+	transition: all 0.3s linear;
+	cursor: pointer;
+	text-decoration: none;
+	margin-right: 10px
+  }
+  .buttons-con .action-link-wrap a:hover {
+	background: #5A5C6C;
+	color: #fff;
+  }
+
+  #Polygon-1 , #Polygon-2 , #Polygon-3 , #Polygon-4 , #Polygon-4, #Polygon-5 {
+	animation: float 1s infinite ease-in-out alternate;
+  }
+  #Polygon-2 {
+	animation-delay: .2s;
+  }
+  #Polygon-3 {
+	animation-delay: .4s;
+  }
+  #Polygon-4 {
+	animation-delay: .6s;
+  }
+  #Polygon-5 {
+	animation-delay: .8s;
+  }
+
+  @keyframes float {
+	  100% {
+	  transform: translateY(20px);
+	}
+  }
+  @media (max-width: 450px) {
+	svg {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  margin-top: -250px;
+	  margin-left: -190px;
+	}
+	.message-box {
+	  top: 50%;
+	  left: 50%;
+	  margin-top: -100px;
+	  margin-left: -190px;
+	  text-align: center;
+	}
+  }
+
+  .error-code {
+	  text-align: center;
+  }
+  #Yui-error {
+	  border-radius: 10px;
+  }
