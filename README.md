@@ -58,3 +58,8 @@ Wouldn't it be awesome to be able to add them to a personal list on the cloud an
 ![wireframe](https://i.imgur.com/iHlxgWf.png)
 
 Development process: [Trello](https://trello.com/b/Gbi8CUai/unit-2-project)
+
+
+#### Future updates:
+* Add a dark mode
+* Improve mobile responsiveness
